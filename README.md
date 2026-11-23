@@ -2,15 +2,19 @@
 
 整合素与白细胞多步黏附级联综述论文 + Lean 4 形式化核验骨架。
 
+**English version: [README.en.md](./README.en.md)**
+
 本仓库沉淀「Timothy Springer 与整合素免疫黏附受体」课题的
-研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护。
+研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护，
+并提供中英双语论文与文档。
 
 ## 目录结构
 
 ```
 integrin-adhesion-review/
 ├── paper/
-│   └── integrin_adhesion_review.md   # 完整综述论文
+│   ├── integrin_adhesion_review.md    # 完整综述论文（中文）
+│   └── integrin_adhesion_review_en.md  # English review
 ├── IntegrinAdhesion.lean              # Lean 库根模块
 ├── IntegrinAdhesion/
 │   ├── Basic.lean
@@ -20,7 +24,7 @@ integrin-adhesion-review/
 ├── lake-manifest.json
 ├── .github/workflows/                 # Lean CI
 ├── CHANGELOG.md
-└── README.md
+└── README.md / README.en.md
 ```
 
 ## 论文要点
@@ -63,6 +67,13 @@ lake build
 - `main` 为主干分支；论文修订、形式化补充、依赖升级分别提交，提交信息
   采用 Conventional Commits（`feat:` / `docs:` / `fix:` / `chore:` 等）。
 - 每个发布基线打 Git tag：`vX.Y.Z`。
+
+## 双语版本管理
+
+- 论文：`paper/integrin_adhesion_review.md`（中文）与 `paper/integrin_adhesion_review_en.md`（英文）内容对齐；
+- 文档：`README.md`（中文）与 `README.en.md`（英文）互相链接；
+- 变更日志：`CHANGELOG.md` 同时保留中英两段说明；
+- 论文修订时应同步更新两个语言版本，提交信息在 subject 中注明 `docs(zh)` / `docs(en)`。
 
 ## 参考文献
 
