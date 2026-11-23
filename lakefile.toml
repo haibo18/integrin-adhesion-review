@@ -1,0 +1,6 @@
+name = "IntegrinAdhesion"
+version = "0.1.0"
+defaultTargets = ["IntegrinAdhesion"]
+
+[[lean_lib]]
+name = "IntegrinAdhesion"
